@@ -40,3 +40,21 @@ class Rectangle {
 		return (false);
 	}
 }
+
+class Circle {
+	public int x, y, r;
+
+	public Circle() {
+		this(0, 0, 0);
+	}
+
+	public Circle(int x, int y, int r) {
+		this.x = x;
+		this.y = y;
+		this.r = r;
+	}
+
+	public boolean isOverlapped(Circle b) {
+		return ((this.r + b.r) * (this.r + b.r) < (this.x - b.x) * (this.x - b.x) + (this.y - b.y) * (this.y - b.y));
+	}
+}
