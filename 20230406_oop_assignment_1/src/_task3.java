@@ -6,6 +6,7 @@ public class _task3 {
 		String user = "", com, winner;
 		String comArr[] = { "Rock", "Paper", "Scissor" };
 
+		System.out.println("Let's play rock-paper-scissors game with computer");
 		while (true) {
 			winner = "Computer";
 			while (true) {
@@ -13,7 +14,7 @@ public class _task3 {
 				user = sc.next();
 				if (user.equals("Rock") || user.equals("Scissor") || user.equals("Paper") || user.equals("stop"))
 					break;
-				System.out.println("Wrong Number");
+				System.out.println("Wrong input");
 			}
 			if (user.equals("stop"))
 				break;
