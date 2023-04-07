@@ -35,7 +35,7 @@ public class MounthSchedule {
 		int newDay;
 		System.out.print("Date(1-" + this.days.length + ")? ");
 		newDay = sc.nextInt();
-		if (newDay >= 1 && newDay <= days.length) {
+		if (newDay >= 1 && newDay <= this.days.length) {
 			System.out.print("Do list (without space)? ");
 			this.days[newDay - 1].set(sc.next());
 		}
@@ -45,7 +45,7 @@ public class MounthSchedule {
 		int newDay;
 		System.out.print("Date(1-" + this.days.length + ")? ");
 		newDay = sc.nextInt();
-		if (newDay >= 1 && newDay <= days.length) {
+		if (newDay >= 1 && newDay <= this.days.length) {
 			this.days[newDay - 1].show();
 			System.out.println(" on " + newDay
 					+ (newDay == 1 ? "st" : newDay == 2 ? "nd" : newDay == 3 ? "rd" : "th") + ".");
