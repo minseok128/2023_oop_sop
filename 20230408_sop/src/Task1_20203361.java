@@ -1,4 +1,4 @@
-public class _task1 {
+public class Task1_20203361 {
     public static void main(String[] args) throws Exception {
         Rectangle r = new Rectangle(2, 2, 8, 7);
         Rectangle s = new Rectangle(5, 5, 6, 6);
