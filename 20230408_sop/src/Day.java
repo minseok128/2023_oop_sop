@@ -10,6 +10,6 @@ public class Day {
 	}
 
 	void show() {
-		System.out.println(this.work != null ? "There is [" + this.get() + "]" : "Nothing");
+		System.out.print(this.work != null ? "There is [" + this.get() + "]" : "Nothing");
 	}
 }

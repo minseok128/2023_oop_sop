@@ -14,24 +14,16 @@ public class MounthSchedule {
 	}
 
 	public void run() {
-		int command;
+		int c;
 
 		System.out.println("This is schedule management program for this mounth.");
-		while (true) {
+		do {
 			System.out.print("\nCommand(Insert: 1, Show: 2, Quit: 3)>> ");
-			command = sc.nextInt();
-			if (command == 1)
-				input();
-			else if (command == 2)
-				view();
-			else if (command == 3) {
-				finish();
-				break;
-			}
-		}
+			c = sc.nextInt();
+		} while (c == 1 ? input() : c == 2 ? view() : c == 3 ? finish() : true);
 	}
 
-	void input() {
+	boolean input() {
 		int newDay;
 		System.out.print("Date(1-" + this.days.length + ")? ");
 		newDay = sc.nextInt();
@@ -39,9 +31,10 @@ public class MounthSchedule {
 			System.out.print("Do list (without space)? ");
 			this.days[newDay - 1].set(sc.next());
 		}
+		return (true);
 	}
 
-	void view() {
+	boolean view() {
 		int newDay;
 		System.out.print("Date(1-" + this.days.length + ")? ");
 		newDay = sc.nextInt();
@@ -50,10 +43,12 @@ public class MounthSchedule {
 			System.out.println(" on " + newDay
 					+ (newDay == 1 ? "st" : newDay == 2 ? "nd" : newDay == 3 ? "rd" : "th") + ".");
 		}
+		return (true);
 	}
 
-	void finish() {
+	boolean finish() {
 		System.out.println("This is the end of the program.");
 		sc.close();
+		return (false);
 	}
 }
