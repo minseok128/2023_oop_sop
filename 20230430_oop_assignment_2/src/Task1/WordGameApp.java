@@ -1,3 +1,5 @@
+package Task1;
+
 import java.util.Scanner;
 
 public class WordGameApp {
@@ -11,7 +13,7 @@ public class WordGameApp {
         Player[] playerArr;
         String recentWord = "father", nextWord;
 
-        System.out.print("Starting Word Relay Game\nHow many player? >> ");
+        System.out.print("Starting Word Relay Game...\nHow many player? >> ");
         playerNum = sc.nextInt();
         playerArr = new Player[playerNum];
         for (int i = 0; i < playerNum; i++) {
@@ -27,26 +29,5 @@ public class WordGameApp {
             recentWord = nextWord;
         }
         sc.close();
-    }
-}
-
-class Player {
-    private String name;
-
-    Player(String name) {
-        this.name = name;
-    }
-
-    String getWordFromUser(Scanner sc) {
-        System.out.print(this.name + " >> ");
-        return (sc.next());
-    }
-
-    boolean checkSuccess(String recentWord, String nextWord) {
-        if (nextWord.charAt(0) != recentWord.charAt(recentWord.length() - 1)) {
-            System.out.println(this.name + " lose the game.");
-            return (false);
-        }
-        return (true);
     }
 }
