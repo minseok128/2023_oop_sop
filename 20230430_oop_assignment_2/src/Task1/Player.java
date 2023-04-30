@@ -2,7 +2,7 @@ package Task1;
 
 import java.util.Scanner;
 
-class Player {
+public class Player {
 	private String name;
 
 	Player(String name) {
