@@ -5,36 +5,22 @@ import java.util.Scanner;
 public class Calculator {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int a, b, res = 0;
-		char op;
-		Add add = new Add();
-		Sub sub = new Sub();
-		Mul mul = new Mul();
-		Div div = new Div();
+		int a, b, op;
+		Operator[] arr = new Operator[4];
+		arr[0] = new Add();
+		arr[1] = new Sub();
+		arr[2] = new Mul();
+		arr[3] = new Div();
 
 		System.out.print("Enter two operands and an operator >> ");
 		a = sc.nextInt();
 		b = sc.nextInt();
 		op = sc.next().charAt(0);
-		switch (op) {
-			case '+':
-				add.setValue(a, b);
-				res = add.calculate();
-				break;
-			case '-':
-				sub.setValue(a, b);
-				res = sub.calculate();
-				break;
-			case '*':
-				mul.setValue(a, b);
-				res = mul.calculate();
-				break;
-			case '/':
-				div.setValue(a, b);
-				res = div.calculate();
-				break;
+		op = op == '+' ? 0 : op == '-' ? 1 : op == '*' ? 2 : op == '/' ? 3 : -1;
+		if (op != -1) {
+			arr[op].setValue(a, b);
+			System.out.println(arr[op].calculate());
 		}
-		System.out.println(res);
 		sc.close();
 	}
 }
