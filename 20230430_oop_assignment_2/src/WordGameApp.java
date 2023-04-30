@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.plaf.metal.MetalIconFactory.PaletteCloseIcon;
-
 public class WordGameApp {
     public static void main(String[] args) throws Exception {
         run();
@@ -13,8 +11,7 @@ public class WordGameApp {
         Player[] playerArr;
         String recentWord = "father", nextWord;
 
-        System.out.println("Starting Word Relay Game");
-        System.out.print("How many player? >> ");
+        System.out.print("Starting Word Relay Game\nHow many player? >> ");
         playerNum = sc.nextInt();
         playerArr = new Player[playerNum];
         for (int i = 0; i < playerNum; i++) {
@@ -23,22 +20,33 @@ public class WordGameApp {
         }
 
         System.out.println("Starting word is \"" + recentWord + "\"");
-        for (int i = 0;; i++) {
-            System.out.print(playerArr[i % playerNum].name + " >> ");
-            nextWord = sc.next();
-            if (nextWord.charAt(nextWord.length() - 1) != recentWord.charAt(recentWord.length() - 1)) {
-                System.out.println(playerArr[i % playerNum].name + " lose the game.");
+        for (int i = 0;; i %= playerNum) {
+            nextWord = playerArr[i].getWordFromUser(sc);
+            if (!playerArr[i++].checkSuccess(recentWord, nextWord))
                 break;
-            }
+            recentWord = nextWord;
         }
         sc.close();
     }
 }
 
 class Player {
-    String name;
+    private String name;
 
     Player(String name) {
         this.name = name;
+    }
+
+    String getWordFromUser(Scanner sc) {
+        System.out.print(this.name + " >> ");
+        return (sc.next());
+    }
+
+    boolean checkSuccess(String recentWord, String nextWord) {
+        if (nextWord.charAt(0) != recentWord.charAt(recentWord.length() - 1)) {
+            System.out.println(this.name + " lose the game.");
+            return (false);
+        }
+        return (true);
     }
 }
