@@ -31,10 +31,10 @@ public class Line {
 		return (0);
 	}
 
-	int cancel(String newName)
+	int cancel(String tagetName)
 	{
 		for (int i = 0; i < MAX_COL; i++) {
-			if (arr[i].equals(newName)) {
+			if (arr[i].equals(tagetName)) {
 				arr[i] = "__";
 				return (0);
 			}
