@@ -9,4 +9,4 @@ public class _1 {
         System.out.printf("%.0f won is $%.1f\n", won, result);
         sc.close();
     }
-
+}
