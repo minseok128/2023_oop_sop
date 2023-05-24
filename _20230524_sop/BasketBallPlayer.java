@@ -1,5 +1,3 @@
-package _20230524_sop;
-
 public class BasketBallPlayer extends Player {
 	private double jump;
 

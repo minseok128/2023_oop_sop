@@ -1,5 +1,3 @@
-package _20230524_sop;
-
 public class SoccerPlayer extends Player {
 	private double kickSpeed;
 
