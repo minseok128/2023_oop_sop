@@ -1,35 +1,10 @@
-public class Player {
-	private String name;
-	private double speed;
-	private String[] tools;
+public interface Player {
 
-	public Player(String name) {
-		this.name = name;
-	}
+	public String getName();
 
-	public String getName() {
-		return name;
-	}
+	public void setSpeed(double speed);
 
-	public void setSpeed(double speed) {
-		this.speed = speed;
-	}
+	public void setTools(String[] tools);
 
-	public void setTools(String[] tools) {
-		this.tools = tools;
-	}
-
-	public void showDetail() {
-		System.out.println("Name: " + (name == null ? "No information" : name));
-		System.out.println("Speed: " + (speed == 0 ? "No information" : speed));
-		System.out.print("Tools: ");
-		if (tools != null)
-		{
-			System.out.println();
-			for (int i = 0; i < tools.length; i++)
-				System.out.println((i + 1) + "th: " + (tools[i] == null ? "No information" : tools[i]));
-		}
-		else
-			System.out.println("No information");
-	}
+	public void showDetail();
 }	
