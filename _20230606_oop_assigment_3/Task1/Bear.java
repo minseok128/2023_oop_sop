@@ -22,11 +22,11 @@ public class Bear extends GameObject {
 			else if (c == 'd') dy = -1 * distance;
 			else if (c == 'f') dx = 1 * distance;
 			
-			if (this.x + dx < 0 || this.x + dx >= 20 || this.y + dy < 0 || this.y + dy >= 10)
+			if (x + dx < 0 || x + dx >= 20 || y + dy < 0 || y + dy >= 10)
 				System.out.println("You can't go there!");
 			else {
-				this.x += dx;
-				this.y += dy;
+				x += dx;
+				y += dy;
 				break;
 			}
 		}

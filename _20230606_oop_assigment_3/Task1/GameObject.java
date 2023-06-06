@@ -7,12 +7,8 @@ public abstract class GameObject {
 		this.distance = distance;
 	}
 
-	public int getX() {
-		return this.x;
-	}
-	public int getY() {
-		return this.y;
-	}
+	public int getX() { return this.x; }
+	public int getY() { return this.y; }
 	public boolean collide(GameObject p) {
 		if (this.x == p.getX() && this.y == p.getY())
 			return true;

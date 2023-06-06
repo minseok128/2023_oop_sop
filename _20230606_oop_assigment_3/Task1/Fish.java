@@ -11,17 +11,17 @@ class Fish extends GameObject {
 	@Override
 	public void move()
 	{
-		int new_y, new_x, direction;
+		int new_y, new_x, dir;
 
 		while (true) {
-			direction = rand.nextInt(4);
-			new_y = this.y + dy[direction] * distance;
-			new_x = this.x + dx[direction] * distance;
+			dir = rand.nextInt(4);
+			new_y = y + dy[dir] * distance;
+			new_x = x + dx[dir] * distance;
 
 			if (new_x >= 0 && new_x < 20 && new_y > 0 && new_y < 10)
 			{
-				this.x = new_x;
-				this.y = new_y;
+				x = new_x;
+				y = new_y;
 				break ;
 			}
 		}
