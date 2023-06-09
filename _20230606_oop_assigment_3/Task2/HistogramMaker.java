@@ -13,8 +13,7 @@ public class HistogramMaker {
 			arr = bf.readLine().toUpperCase().split(" ");
 			if (arr[0].equals(";"))
 				break;
-			for (int i = 0; i < arr.length; i++)
-			{
+			for (int i = 0; i < arr.length; i++) {
 				word = arr[i];
 				for (int j = 0; j < word.length(); j++)
 					if (word.charAt(j) >= 'A' && word.charAt(j) <= 'Z')
@@ -23,8 +22,7 @@ public class HistogramMaker {
 		}
 
 		System.out.println("Make Histogram.");
-		for (int i = 0; i < 26; i++)
-		{
+		for (int i = 0; i < 26; i++) {
 			System.out.print((char)('A' + i) + " : ");
 			for (int j = 0; j < histogram[i] / 3; j++)
 				System.out.print("*");
