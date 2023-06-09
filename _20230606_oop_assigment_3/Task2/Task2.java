@@ -17,17 +17,13 @@ public class Task2 {
 			{
 				word = arr[i];
 				for (int j = 0; j < word.length(); j++)
-				{
 					if (word.charAt(j) >= 'A' && word.charAt(j) <= 'Z')
 						histogram[word.charAt(j) - 'A']++;
-				}
 			}
 		}
 
 		for (int i = 0; i < 26; i++)
-		{
 			System.out.println((char)('A' + i) + ": "+ histogram[i]);
-		}
 	}
 }
 
