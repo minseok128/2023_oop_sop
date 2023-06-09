@@ -3,8 +3,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class WordQuiz {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
 		var rand = new Random();
 		var select_vec = new Vector<Integer>();
@@ -26,13 +25,11 @@ public class WordQuiz {
 
 		System.out.println("Start English word quessing game. Enter -1 to terminate.");
 		System.out.println("Currently, we have " + v.size() + " words.");
-		while (true)
-		{
+		while (true) {
 			int rand_num;
 			
 			select_vec.clear();
-			while (select_vec.size() < 4)
-			{
+			while (select_vec.size() < 4) {
 				rand_num = rand.nextInt(v.size());
 				if (!select_vec.contains(rand_num))
 					select_vec.add(rand_num);
@@ -52,14 +49,5 @@ public class WordQuiz {
 				System.out.println("No!!");
 		}
 		sc.close();
-	}
-}
-
-class Word {
-	String en, kr;
-	
-	Word(String en, String kr) {
-		this.en = en;
-		this.kr = kr;
 	}
 }
