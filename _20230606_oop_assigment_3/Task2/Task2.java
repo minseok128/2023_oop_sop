@@ -1,12 +1,11 @@
 public class Task2 {
 	public static void main(String[] args)
 	{
-		
+
 	}
 }
 
 /*
- 
 The club isn't the best place to find a lover
 So the bar is where I go
 Me and my friends at the table doing shots
