@@ -22,8 +22,14 @@ public class Task2 {
 			}
 		}
 
+		System.out.println("Make Histogram.");
 		for (int i = 0; i < 26; i++)
-			System.out.println((char)('A' + i) + ": "+ histogram[i]);
+		{
+			System.out.print((char)('A' + i) + " : ");
+			for (int j = 0; j < histogram[i] / 3; j++)
+				System.out.print("*");
+			System.out.println();
+		}
 	}
 }
 
