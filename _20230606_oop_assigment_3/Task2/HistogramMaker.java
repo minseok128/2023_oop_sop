@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class Task2 {
+public class HistogramMaker {
 	public static void main(String[] args) throws IOException {
 		var bf = new BufferedReader(new InputStreamReader(System.in));
 		int[] histogram = new int[26];
