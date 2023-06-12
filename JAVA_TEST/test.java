@@ -1,35 +1,16 @@
+import java.util.*;
+
 public class test {
-	public static void main(String[] args)
-	{
-		//E d = new E();
+	public static void main(String[] args) {
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+
+		map.put("a", 1);
+		map.put("b", 2);
+
+		func(map);
+	}
+
+	static <T> void func(HashMap<String, T> map) {
+		return map.get("a");
 	}
 }
-
-// abstract class A {
-// 	abstract void bb();
-// }
-
-// class B extends A {
-// 	int a;
-
-// 	@Override
-// 	void bb()
-// 	{
-// 		a = 2;
-// 		System.out.println(a);
-// 	}
-// }
-
-// interface in {
-// 	default int add(int a, int b){
-// 		return (a + b);
-// 	}
-// }
-
-
-abstract class C {
-	abstract void add();
-}
-
-// class D extends C {
-// }
